@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.hospital</groupId>
+        <artifactId>hospital-server</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>hospital-inpatient</artifactId>
+    <packaging>jar</packaging>
+    <name>hospital-inpatient</name>
+
+    <dependencies>
+        <!-- 内部公共模块 -->
+        <dependency>
+            <groupId>com.hospital</groupId>
+            <artifactId>hospital-common</artifactId>
+        </dependency>
+        <!-- 引入 System 模块获取科室/医生/药品信息 -->
+        <dependency>
+            <groupId>com.hospital</groupId>
+            <artifactId>hospital-system</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- 引入 Auth 模块获取患者信息 -->
+        <dependency>
+            <groupId>com.hospital</groupId>
+            <artifactId>hospital-auth</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- 单元测试 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
