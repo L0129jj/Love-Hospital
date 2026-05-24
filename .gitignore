@@ -1,0 +1,100 @@
+# ==========================================
+# 仁爱医院综合管理系统 - 全局 Git 忽略规则
+# ==========================================
+
+# ------------------------------------------
+# 1. 编译输出与构建产物
+# ------------------------------------------
+**/target/
+**/dist/
+**/dist-ssr/
+**/build/
+**/bin/
+**/out/
+*.class
+*.war
+*.jar
+*.ear
+*.zip
+*.tar.gz
+
+# 排除测试/开发环境编译的例外情况
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ------------------------------------------
+# 2. 依赖管理
+# ------------------------------------------
+**/node_modules/
+**/bower_components/
+.mvn/wrapper/maven-wrapper.jar
+
+# ------------------------------------------
+# 3. 环境变量与机密配置
+# ------------------------------------------
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+*.p12
+*.jks
+
+# ------------------------------------------
+# 4. 常见 IDE / 编辑器私有配置
+# ------------------------------------------
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### VS Code ###
+.vscode/
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+
+### Eclipse / STS ###
+.apt_generated/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+
+# ------------------------------------------
+# 5. 系统与日志临时文件
+# ------------------------------------------
+# 操作系统缓存
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+
+# 日志
+**/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Crashlytics 与临时文件
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
